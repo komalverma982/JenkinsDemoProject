@@ -34,7 +34,7 @@ namespace JenkinsDemoProject
                 Session.FindElementByName("Two").Click();
                 Session.FindElementByName("Equals").Click();
                 var results = Session.FindElementByAccessibilityId("CalculatorResults");
-                Assert.AreEqual(results.Text, "5");
+                Assert.AreEqual(results.Text, "Display is 4");
                 ExtentReporter.PassTest(test);
             }
             catch (Exception)
