@@ -26,5 +26,11 @@ pipeline {
                bat 'dotnet test D:/JenkinsDemoProject/JenkinsDemoProject/JenkinsDemoProject.csproj'
             }
         }
+		stage('Publish HTML reports') {
+            steps {
+			echo 'publishing HTML report'
+               publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: '', reportFiles: 'JenkinsDemoProject\\bin\\Debug\\netcoreapp3.1\\Reports\\Automation_Report\\index.html', reportName: 'Extent Report', reportTitles: ''])
+            }
+        }
     }
 }
