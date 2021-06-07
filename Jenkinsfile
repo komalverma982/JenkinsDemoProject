@@ -29,7 +29,7 @@ pipeline {
 		stage('Publish HTML reports') {
             steps {
 			echo 'publishing HTML report'
-               publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: '', reportFiles: 'JenkinsDemoProject\\bin\\Debug\\netcoreapp3.1\\Reports\\Automation_Report\\index.html', reportName: 'Extent Report', reportTitles: ''])
+               publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: '', reportFiles: 'D:\\JenkinsDemoProject\\JenkinsDemoProject\\bin\\Debug\\netcoreapp3.1\\Reports\\Automation_Report\\index.html', reportName: 'Extent Report', reportTitles: ''])
             }
         }
     }
